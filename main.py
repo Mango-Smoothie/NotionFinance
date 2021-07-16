@@ -1,16 +1,27 @@
-# This is a sample Python script.
+# # This is a sample Python script.
+#
+# # Press ⌃R to execute it or replace it with your code.
+# # Press Double ⇧ to search everywhere for classes, files, tool windows, actions, and settings.
+#
+#
+# def print_hi(name):
+#     # Use a breakpoint in the code line below to debug your script.
+#     print(f'Hi, {name}')  # Press ⌘F8 to toggle the breakpoint.
+#
+#
+# # Press the green button in the gutter to run the script.
+# if __name__ == '__main__':
+#     print_hi('PyCharm')
+#
+# # See PyCharm help at https://www.jetbrains.com/help/pycharm/
 
-# Press ⌃R to execute it or replace it with your code.
-# Press Double ⇧ to search everywhere for classes, files, tool windows, actions, and settings.
+import key
+import yfinance
+from notion.client import NotionClient
+from datetime import datetime
 
+client = NotionClient(token_v2= key.api_key)
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press ⌘F8 to toggle the breakpoint.
+page = client.get_block("https://www.notion.so/Home-fde643a9e77d4cb2bf0a59ba8be323bb")
+print("The title is:", page.title)
 
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
